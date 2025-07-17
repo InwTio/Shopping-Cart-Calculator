@@ -27,14 +27,12 @@ public class ShoppingCartCalculator {
 
                 if (quantity>=6 && sku == "BULK"){
                     total += price * quantity * 0.9;
-                    return total;
                 }
 
                 if (sku == "BOGO"){
                     int BOGO = quantity/2;
                     if(quantity%2 != 0) BOGO+=1;
                     total += price * BOGO;
-                    return total;
                 }
 
                if (sku == "NORMAL"){

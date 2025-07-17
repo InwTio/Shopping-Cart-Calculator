@@ -52,9 +52,10 @@ public class ShoppingCartManualTest {
 
         // Test 4: คำนวณส่วนลด BOGO
         ArrayList<CartItem> bogoCart = new ArrayList<>();
-        bogoCart.add(new CartItem("BOGO", "Banana", 12.0, 4)); // 24
+        bogoCart.add(new CartItem("BOGO", "Banana", 25.0, 4)); // 50
+        bogoCart.add(new CartItem("BOGO", "Apple", 15.0, 2)); // 15
         double total4 = ShoppingCartCalculator.calculateTotalPrice(bogoCart);
-        if (total4 == 24.0) {
+        if (total4 == 65.0) {
             System.out.println("PASSED: BOGO cart; buy four pay for two is correct (24.0)");
             passedCount++;
         } else {
